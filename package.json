@@ -3,17 +3,15 @@
   "version": "1.0.0",
   "description": "setup Webpack from scratch",
   "private": true,
+  "sideEffects": false,
   "dependencies": {},
   "devDependencies": {
     "webpack": "^5.39.1",
     "webpack-cli": "^4.7.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack -- --mode production",
-    "start": "webpack --mode=development",
-    "debugnode": "node --inspect --inspect-brk ./src/assets/js/main.js",
-    "debug": "webpack debug"
+    "build": "webpack -- --mode production --watch",
+    "start": "webpack --mode development --watch"
   },
   "keywords": [],
   "author": "Bashir",

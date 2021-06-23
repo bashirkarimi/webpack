@@ -1,3 +1,8 @@
+
+import nav  from "./nav";
+import footer from "./footer";
+
+
 function component() {
   const element = document.createElement('div');
 
@@ -6,4 +11,7 @@ function component() {
   return element;
 }
 console.log('debug it')
+console.log(nav)
 document.body.appendChild(component());
+document.body.appendChild(nav);
+document.body.appendChild(footer)
