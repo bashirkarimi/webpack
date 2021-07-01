@@ -1,0 +1,6 @@
+@import './test.scss';
+
+body {
+  background: purple;
+  color: blue;
+}
