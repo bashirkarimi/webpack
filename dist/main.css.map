@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://webpack/./src/assets/css/test.scss","webpack://webpack/./src/assets/css/main.css"],"names":[],"mappings":"AAAA;EACE;ACCF;;AAAA;EACE;EACA;AAGF,C","file":"main.css","sourcesContent":["body {\n  background: blue;\n}","@import './test.scss';\n\nbody {\n  background: purple;\n  color: blue;\n}"],"sourceRoot":""}

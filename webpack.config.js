@@ -7,6 +7,7 @@ module.exports = mode => {
   return {
     entry: './src/assets/js/main.js',
     mode: mode.development ? 'development': 'production',
+    devtool: mode.development ? 'source-map' : '',
     output: {
       filename: mode.production ? '[name].[contenthash].js': '[name].js',
       path: path.resolve(__dirname, 'dist'),
@@ -19,7 +20,7 @@ module.exports = mode => {
       rules: [
         {
           test: /\.js$/,
-          exclude: /(node_modules)/,
+          exclude: /node_modules/,
           use: {
             loader: 'babel-loader',
             options: {
