@@ -198,11 +198,14 @@ ansiHTML.reset()
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-var footer = document.createElement('footer');
-footer.innerHTML = 'footer';
-footer.style.color = 'green';
-console.log('footer');
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (footer);
+var createFototer = function createFototer() {
+  var footer = document.createElement('footer');
+  footer.innerHTML = 'footer';
+  footer.style.color = 'green';
+  document.body.append(footer);
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createFototer);
 
 /***/ }),
 
@@ -216,11 +219,14 @@ console.log('footer');
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-var nav = document.createElement('nav');
-nav.innerHTML = 'navigation';
-nav.style.color = 'red';
-console.log('nav');
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (nav);
+var createNav = function createNav() {
+  var nav = document.createElement('nav');
+  nav.innerHTML = 'navigation';
+  nav.style.color = 'red';
+  document.body.appendChild(nav);
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createNav);
 
 /***/ }),
 
@@ -9803,15 +9809,15 @@ __webpack_require__(/*! ../css/main.css */ "./src/assets/css/main.css");
 
 
 
-function component() {
+var createComponent = function createComponent() {
   var element = document.createElement('div');
   element.innerHTML = 'Helo testing JS file in developement mode';
-  return element;
-}
+  document.body.appendChild(element);
+};
 
-document.body.appendChild(component());
-document.body.appendChild(_nav__WEBPACK_IMPORTED_MODULE_0__.default);
-document.body.appendChild(_footer__WEBPACK_IMPORTED_MODULE_1__.default);
+createComponent();
+(0,_nav__WEBPACK_IMPORTED_MODULE_0__.default)();
+(0,_footer__WEBPACK_IMPORTED_MODULE_1__.default)();
 })();
 
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.

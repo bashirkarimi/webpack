@@ -1,6 +1,8 @@
-const footer = document.createElement('footer');
-footer.innerHTML = 'footer';
-footer.style.color = 'green';
-console.log('footer');
+const createFototer = () => {
+  const footer = document.createElement('footer');
+  footer.innerHTML = 'footer';
+  footer.style.color = 'green';
+  document.body.append(footer);
+}
 
-export default footer;
+export default createFototer;
