@@ -8,7 +8,7 @@ module.exports = mode => {
   return {
     entry: './src/assets/js/main.js',
     mode: mode.development ? 'development': 'production',
-    devtool: mode.development ? 'source-map' : '',
+    devtool: mode.development ? 'source-map' : 'eval',
     output: {
       filename: mode.production ? '[name].[contenthash].js': '[name].js',
       path: path.resolve(__dirname, 'dist'),
