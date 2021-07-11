@@ -6,6 +6,7 @@ const postcssPresetEnv = require('postcss-preset-env');
 module.exports = mode => {
   console.log('mode', mode)
   return {
+    target: 'web',
     entry: './src/assets/js/main.js',
     mode: mode.development ? 'development': 'production',
     devtool: mode.development ? 'source-map' : 'eval',
