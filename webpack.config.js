@@ -6,19 +6,12 @@ const postcssPresetEnv = require('postcss-preset-env');
 module.exports = mode => {
   console.log('mode', mode)
   return {
-    target: 'web',
     entry: './src/assets/js/main.js',
     mode: mode.development ? 'development': 'production',
-    devtool: mode.development ? 'source-map' : 'eval',
     output: {
       filename: mode.production ? '[name].[contenthash].js': '[name].js',
       path: path.resolve(__dirname, 'dist'),
     },
-    plugins: [
-      new htmlWebpackPlugin(),
-      new MiniCssExtractPlugin({ filename: "[name].css" }),
-      new postcssPresetEnv(),
-    ],
     module: {
       rules: [
         {
@@ -56,9 +49,16 @@ module.exports = mode => {
         },
       ],
     },
+    plugins: [
+      new htmlWebpackPlugin(),
+      new MiniCssExtractPlugin({ filename: "[name].css" }),
+      new postcssPresetEnv(),
+    ],
     devServer: {
       writeToDisk: true
     },
+    devtool: mode.development ? 'source-map' : 'eval',
+    target: 'web',
     optimization: {
       usedExports: true,
     }
