@@ -1,20 +1,23 @@
 body {
-  background: blue;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-image: url(rangoli.svg);
+  background-size: 20px;
 }
 
 body {
-  background: purple;
-  color: blue;
+  background: #eeeeee;
+  color: #333333;
 }
 
 /*# sourceMappingURL=main.css.map*/

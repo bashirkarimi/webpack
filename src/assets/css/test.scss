@@ -1,8 +1,11 @@
 body {
-  background: blue;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  background-image: url(../svgs/rangoli.svg);
+  background-size: 20px;
 }

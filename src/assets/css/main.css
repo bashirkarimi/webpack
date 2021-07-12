@@ -1,6 +1,6 @@
 @import './test.scss';
 
 body {
-  background: purple;
-  color: blue;
+  background: rgb(238, 238, 238);
+  color: rgb(51, 51, 51);
 }

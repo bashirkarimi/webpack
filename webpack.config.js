@@ -11,6 +11,8 @@ module.exports = mode => {
     output: {
       filename: mode.production ? '[name].[contenthash].js': '[name].js',
       path: path.resolve(__dirname, 'dist'),
+      assetModuleFilename: '[name][ext][query]',
+      clean: true,
     },
     module: {
       rules: [
@@ -23,6 +25,10 @@ module.exports = mode => {
               presets: ['@babel/preset-env']
             }
           }
+        },
+        {
+          test: /\.(png|svg|jpg|jpeg|gif)$/i,
+          type: 'asset/resource'
         },
         {
           test: /\.s?css$/,

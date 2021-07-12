@@ -9713,6 +9713,17 @@ webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
 webpackContext.id = "./node_modules/webpack/hot sync ^\\.\\/log$";
 
+/***/ }),
+
+/***/ "./src/assets/images/waterfall.jpg":
+/*!*****************************************!*\
+  !*** ./src/assets/images/waterfall.jpg ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "waterfall.jpg";
+
 /***/ })
 
 /******/ 	});
@@ -9794,6 +9805,26 @@ webpackContext.id = "./node_modules/webpack/hot sync ^\\.\\/log$";
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
@@ -9802,22 +9833,30 @@ var __webpack_exports__ = {};
 /*!*******************************!*\
   !*** ./src/assets/js/main.js ***!
   \*******************************/
-/* harmony import */ var _nav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./nav */ "./src/assets/js/nav.js");
-/* harmony import */ var _footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./footer */ "./src/assets/js/footer.js");
+/* harmony import */ var _nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./nav */ "./src/assets/js/nav.js");
+/* harmony import */ var _footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./footer */ "./src/assets/js/footer.js");
+/* harmony import */ var _images_waterfall_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../images/waterfall.jpg */ "./src/assets/images/waterfall.jpg");
 __webpack_require__(/*! ../css/main.css */ "./src/assets/css/main.css");
 
 
 
 
+console.log(_images_waterfall_jpg__WEBPACK_IMPORTED_MODULE_0__);
+
 var createComponent = function createComponent() {
   var element = document.createElement('div');
+  var img = document.createElement('img');
+  img.src = _images_waterfall_jpg__WEBPACK_IMPORTED_MODULE_0__;
+  img.style.width = '200px';
+  element.classList.add('container');
   element.innerHTML = 'Helo testing JS file in developement mode';
   document.body.appendChild(element);
+  element.append(img);
 };
 
 createComponent();
-(0,_nav__WEBPACK_IMPORTED_MODULE_0__.default)();
-(0,_footer__WEBPACK_IMPORTED_MODULE_1__.default)();
+(0,_nav__WEBPACK_IMPORTED_MODULE_1__.default)();
+(0,_footer__WEBPACK_IMPORTED_MODULE_2__.default)();
 })();
 
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
