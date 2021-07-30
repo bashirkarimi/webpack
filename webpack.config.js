@@ -3,7 +3,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 const postcssPresetEnv = require('postcss-preset-env');
 const CompressionPlugin = require("compression-webpack-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = mode => {
   console.log('mode', mode)
@@ -71,10 +70,6 @@ module.exports = mode => {
     target: 'web',
     optimization: {
       usedExports: true,
-      minimizer: [
-        `...`,
-        new CssMinimizerPlugin(),
-      ],
     }
   }
 };
