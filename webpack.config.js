@@ -2,6 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 const postcssPresetEnv = require('postcss-preset-env');
+const CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = mode => {
   console.log('mode', mode)
@@ -59,6 +60,7 @@ module.exports = mode => {
       new htmlWebpackPlugin(),
       new MiniCssExtractPlugin({ filename: "[name].css" }),
       new postcssPresetEnv(),
+      new CompressionPlugin(),
     ],
     devServer: {
       writeToDisk: true,
