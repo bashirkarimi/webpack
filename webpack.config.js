@@ -61,7 +61,8 @@ module.exports = mode => {
       new postcssPresetEnv(),
     ],
     devServer: {
-      writeToDisk: true
+      writeToDisk: true,
+      open: true,
     },
     devtool: mode.development ? 'source-map' : 'eval',
     target: 'web',
