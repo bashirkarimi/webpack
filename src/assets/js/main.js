@@ -1,23 +1,25 @@
 require('../css/main.css');
 
-import createNav  from "./nav";
-import createFooter from "./footer";
+import nav from "./nav";
 import image from "../images/waterfall.jpg";
 console.log(image)
 
 const createComponent = () => {
   const element = document.createElement('div');
-  const img = document.createElement('img');
+  const footerButton = document.createElement('button');
 
-  img.src = image;
-  img.style.width = '200px';
-
+  footerButton.innerText = 'Add footer';
   element.classList.add('container');
   element.innerHTML = 'Helo testing JS file in developement mode';
+  document.body.append(nav);
+  document.body.append(footerButton);
   document.body.appendChild(element);
-  element.append(img);
+
+  footerButton.addEventListener('click', () => {
+    import(/* webpackChunkName: "footer" */ "./footer").then( addFooter => {
+      document.body.appendChild(addFooter.footer)
+    }); 
+  })
 }
 
 createComponent();
-createNav();
-createFooter();

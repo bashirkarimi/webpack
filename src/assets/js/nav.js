@@ -1,8 +1,5 @@
-const createNav = () => {
-  const nav = document.createElement('nav');
-  nav.innerHTML = 'navigation';
-  nav.style.color = 'red';
-  document.body.appendChild(nav);
-}
+const createNav = document.createElement('nav');
+createNav.innerHTML = 'navigation';
+createNav.style.color = 'red';
 
 export default createNav;
