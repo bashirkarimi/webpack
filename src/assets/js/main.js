@@ -16,7 +16,11 @@ const createComponent = () => {
   document.body.appendChild(element);
 
   footerButton.addEventListener('click', () => {
-    import(/* webpackChunkName: "footer" */ "./footer").then( addFooter => {
+    import(
+      /* 
+        webpackChunkName: "footer", 
+        webpackPrefetch: true,  
+      */ "./footer").then( addFooter => {
       document.body.appendChild(addFooter.footer)
     }); 
   })
